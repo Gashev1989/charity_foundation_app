@@ -30,7 +30,7 @@ class CRUDCharityProject(CRUDBase):
         projects = await session.execute(
             select(CharityProject).where(
                 CharityProject.fully_invested == true()
-            ).order_by((CharityProject.close_date - CharityProject.create_date).asc())
+            )
         )
         projects = projects.scalars().all()
         projects_to_repr = []
@@ -42,7 +42,7 @@ class CRUDCharityProject(CRUDBase):
                     'description': project.description
                 }
             )
-        return projects_to_repr
+        return sorted(projects_to_repr, key=lambda x: x['timedelta'])
 
 
 charity_project_crud = CRUDCharityProject(CharityProject)
