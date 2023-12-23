@@ -13,13 +13,13 @@ QRKot — асинхронное API приложение для Благотв�
 **Язык:**  
 Python 3.9  
 **Библиотеки:**  
-FastAPI 
-Alembic 
-SQLAlchemy 
-Pydantic 
-Uvicorn 
-Google Drive API 
-Google Sheets 
+FastAPI  
+Alembic  
+SQLAlchemy  
+Pydantic  
+Uvicorn  
+Google Drive API  
+Google Sheets  
 
 ### Запуск проекта локально
 1. Клонировать репозиторий и перейти в него в командной строке:
